@@ -447,7 +447,7 @@ def ask_chatgpt(n_clicks, user_question, filtered_data):
 
     try:
         response = client.chat.completions.create(
-           model= model_name
+           model= model_name,
             messages=[
                 {"role": "system", "content": """
                 You are an expert in Pokémon card collection analysis.
