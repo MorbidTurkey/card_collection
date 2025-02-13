@@ -1,0 +1,47 @@
+/* 🔹 Fixes the dropdown menu background and text */
+.Select-menu-outer, .VirtualizedSelectOption {
+    background-color: #222222 !important; /* Dark background */
+    color: white !important; /* White text */
+}
+
+/* 🔹 Fixes the selected dropdown text (so user-typed text is white) */
+.Select-value-label {
+    color: white !important;
+}
+
+/* 🔹 Fix the input box inside the dropdown (so typed text is white) */
+.Select input {
+    color: white !important;
+    background-color: #333333 !important;
+}
+
+/* 🔹 Fix the filter input boxes in the table */
+.dash-filter input {
+    background-color: #222222 !important;
+    color: white !important;
+    border: 1px solid #FFD700 !important;
+}
+
+/* 🔹 Force dark background & white text inside table filter input fields */
+.dash-spreadsheet input {
+    background-color: #222222 !important;  /* Dark background */
+    color: white !important;  /* White text */
+    border: 1px solid #444444 !important;  /* Dark gray border */
+    border-radius: 6px !important;  /* Rounded edges */
+    padding: 6px !important;
+}
+
+/* 🔹 Fix the yellow autofill background issue (Chrome issue) */
+.dash-spreadsheet input:-webkit-autofill {
+    background-color: #222222 !important;
+    color: white !important;
+    box-shadow: 0 0 0px 1000px #222222 inset !important;
+    -webkit-text-fill-color: white !important;
+}
+
+/* 🔹 Remove bright yellow focus borders when clicking */
+.dash-spreadsheet input:focus {
+    outline: none !important;  /* Removes default focus outline */
+    border: 1px solid #666666 !important;  /* Softer gray border when focused */
+    box-shadow: none !important;  /* Removes any glow effect */
+}
