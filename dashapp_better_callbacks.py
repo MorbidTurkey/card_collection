@@ -522,10 +522,14 @@ def generate_chart_from_query(user_question, df):
     return fig
 
 
+import os  # Import os to get Render's assigned port
+
 server = app.server  # Required for Render deployment
 
 if __name__ == "__main__":
-    app.run_server(debug=False, host="0.0.0.0", port=8080)
+    port = int(os.environ.get("PORT", 8080))  # Use the assigned port from Render
+    app.run_server(debug=False, host="0.0.0.0", port=port)
+
 
 #if __name__ == '__main__':
 #    app.run_server(debug=True)
