@@ -8,6 +8,7 @@ df = pd.read_excel("Card_list_20240709.xlsx")
 df['Date Bought'] = pd.to_datetime(df['Date Bought']).dt.date
 df['Profit'] = df['AVG'] - df['Price Bought']
 owner_name = "Luke"
+models = client.models.list()
 
 # Colors for styling
 colors = {
