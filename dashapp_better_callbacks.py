@@ -389,7 +389,6 @@ def update_summary_text(table_data):
 import openai
 import plotly.express as px
 
-my_api
 # Initialize OpenAI client
 client = openai.OpenAI(api_key= "sk-proj-wuHCnmIjfT2PqcXbTHnsT3BlbkFJv8i91ZabcLFBJxV0HdbK")  # ✅ Updated for OpenAI v1.0+
 
