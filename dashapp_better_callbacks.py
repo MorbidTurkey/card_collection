@@ -2,7 +2,15 @@ import dash
 from dash import dcc, html, dash_table, Input, Output, State
 import plotly.express as px
 import pandas as pd
+import openai
+import os
+from dotenv import load_dotenv
 
+# Load environment variables from .env file
+load_dotenv()
+
+# Get API key from environment variables
+openai_api_key = os.getenv("OPENAI_API_KEY")
 # Load data
 df = pd.read_excel("Card_list_20240709.xlsx")
 df['Date Bought'] = pd.to_datetime(df['Date Bought']).dt.date
@@ -391,7 +399,7 @@ import openai
 import plotly.express as px
 
 # Initialize OpenAI client
-client = openai.OpenAI(api_key= "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")  # ✅ Updated for OpenAI v1.0+
+client = openai.OpenAI(api_key= "open_ai_key")  # ✅ Updated for OpenAI v1.0+
 
 @app.callback(
     [Output("chat-response", "children"), Output("generated-chart", "figure")],
