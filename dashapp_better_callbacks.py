@@ -438,16 +438,10 @@ def ask_chatgpt(n_clicks, user_question, filtered_data):
     dataset_summary += "\n**Use this dataset to answer all user questions.**"
     dataset_summary += f"\n\nThe user is asking: {user_question}"
 
-    # Use GPT-4 if available, otherwise default to GPT-3.5
-    model_name = "gpt-4-turbo"  # Default to GPT-4
-    try:
-        client.models.retrieve("gpt-4")  # Check if GPT-4 is available
-    except openai.OpenAIError:
-        model_name = "gpt-3.5-turbo"  # Fallback to GPT-3.5
-
+   
     try:
         response = client.chat.completions.create(
-           model= model_name,
+           model= "gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": """
                 You are an expert in Pokémon card collection analysis.
