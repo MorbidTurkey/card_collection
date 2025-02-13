@@ -391,7 +391,7 @@ import openai
 import plotly.express as px
 
 # Initialize OpenAI client
-client = openai.OpenAI(api_key= "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")  # ✅ Updated for OpenAI v1.0+
+client = openai.OpenAI(api_key= "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")  # ✅ Updated for OpenAI v1.0+
 
 @app.callback(
     [Output("chat-response", "children"), Output("generated-chart", "figure")],
