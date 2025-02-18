@@ -12,7 +12,7 @@ load_dotenv()
 # Load API Key from environment variables
 openai.api_key = os.getenv("OPENAI_API_KEY")
 # Load data
-df = pd.read_excel("Card_list_20240709.xlsx")
+df = pd.read_excel("Card_list_20250218.xlsx")
 df['Date Bought'] = pd.to_datetime(df['Date Bought']).dt.date
 df['Profit'] = df['AVG'] - df['Price Bought']
 owner_name = "Luke"
