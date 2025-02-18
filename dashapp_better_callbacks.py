@@ -382,7 +382,7 @@ def update_bar_charts(table_data):
 def update_card_preview(selected_rows, table_data):
     if selected_rows and table_data:
         row = table_data[selected_rows[0]]
-        return f"https://assets.pokemon.com/static-assets/content-assets/cms2/img/cards/web/{row['Set Code']}/{row['Set Code']}_EN_{row['Card Number']}.png"
+        return f"https://assets.pokemon.com/static-assets/content-assets/cms2/img/cards/web/{row['Old Codes']}/{row['Old Codes']}_EN_{row['Card Number']}.png"
     return ""
 
 @app.callback(
