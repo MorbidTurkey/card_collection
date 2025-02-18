@@ -445,7 +445,7 @@ def ask_chatgpt(n_clicks, user_question, filtered_data):
 
    
     try:
-        response = client.chat.completions.create(
+        response = openai.ChatCompletion.create(
            model= "gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": """
