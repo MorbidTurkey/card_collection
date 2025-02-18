@@ -9,8 +9,8 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-# Get API key from environment variables
-openai_api_key = os.getenv("OPENAI_API_KEY")
+# Load API Key from environment variables
+openai.api_key = os.getenv("OPENAI_API_KEY")
 # Load data
 df = pd.read_excel("Card_list_20240709.xlsx")
 df['Date Bought'] = pd.to_datetime(df['Date Bought']).dt.date
