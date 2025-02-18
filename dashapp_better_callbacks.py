@@ -32,7 +32,7 @@ colors = {
 
 
 # Initialize app
-app = dash.Dash()
+app = Dash(__name__)
 
 # App layout
 app.layout = html.Div(style={'backgroundColor': colors['background'], 'margin': '10px', 'padding': '10px'}, children=[
@@ -535,8 +535,8 @@ import os  # Import os to get Render's assigned port
 server = app.server  # Required for Render deployment
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8080))  # Use the assigned port from Render
-    app.run_server(debug=False, host="0.0.0.0", port=port)
+    port = int(os.environ.get("PORT", 8050))  # Default to 8050 if PORT is not set
+    app.run_server(host="0.0.0.0", port=port)
 
 
 #if __name__ == '__main__':
