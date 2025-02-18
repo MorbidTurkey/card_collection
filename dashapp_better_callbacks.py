@@ -398,9 +398,6 @@ def update_summary_text(table_data):
 import openai
 import plotly.express as px
 
-# Initialize OpenAI client
-client = openai.OpenAI(api_key= "open_ai_key")  # ✅ Updated for OpenAI v1.0+
-
 @app.callback(
     [Output("chat-response", "children"), Output("generated-chart", "figure")],
     Input("ask-button", "n_clicks"),
